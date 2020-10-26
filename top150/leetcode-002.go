@@ -28,11 +28,11 @@ type ListNode struct {
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	temp := 0
+	carryBit := 0
 	head := &ListNode{0, nil}
-	nodeCur := head
+	cur := head
 	for l1 != nil || l2 != nil {
-		sum := temp
+		sum := carryBit
 		if l1 != nil {
 			sum += l1.Val
 			l1 = l1.Next
@@ -41,12 +41,12 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			sum += l2.Val
 			l2 = l2.Next
 		}
-		temp = sum / 10
-		nodeCur.Next = &ListNode{sum % 10, nil}
-		nodeCur = nodeCur.Next
+		carryBit = sum / 10
+		cur.Next = &ListNode{sum % 10, nil}
+		cur = cur.Next
 	}
-	if temp != 0 {
-		nodeCur.Next = &ListNode{temp, nil}
+	if carryBit != 0 {
+		cur.Next = &ListNode{carryBit, nil}
 	}
 	return head.Next
 }
