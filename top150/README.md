@@ -6,3 +6,4 @@
 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 5. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+8. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
