@@ -13,22 +13,25 @@ func myAtoi(s string) int {
 		}
 		break
 	}
-
-	if arr[i] == 43 {
+	// start with plus or -
+	if arr[i] == 43 || arr[i] == 45 {
 		i++
+		if arr[i-1] == 45 {
+			flag = -1
+		}
 	}
 
-	if arr[i] == 45 {
-		i++
-		flag = -1
-	}
+	for ; i < len(arr); i++ {
 
-	for ; i < len(arr) && isDigit(arr[i]); i++ {
+		if !isDigit(arr[i]) {
+			break
+		}
+
 		result = result*10 + int(arr[i]) - 48
-		if result > math.MaxInt32 {
+		if result*flag > math.MaxInt32 {
 			return math.MaxInt32
 		}
-		if result < -math.MaxInt32-1 {
+		if result*flag < math.MinInt32 {
 			return math.MinInt32
 		}
 	}
