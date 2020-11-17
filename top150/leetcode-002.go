@@ -22,11 +22,6 @@ Output: [8,9,9,9,0,0,0,1]
 big int add
 */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	carryBit := 0
 	head := &ListNode{0, nil}
