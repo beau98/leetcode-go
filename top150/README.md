@@ -17,3 +17,4 @@
 22. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 24. [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+33. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
