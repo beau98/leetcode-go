@@ -12,12 +12,11 @@ package top150
 
 func search(nums []int, target int) int {
 	length := len(nums)
-
 	if length == 0 {
 		return -1
 	}
-	left := 0
-	right := length - 1
+
+	left, right := 0, length-1
 
 	for left < right {
 		mid := (right-left)>>1 + left
